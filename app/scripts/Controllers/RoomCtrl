@@ -1,5 +1,5 @@
 (function() {
-  function RoomsCtrl(Room, $uibModal) {
+  function RoomCtrl(Room, $uibModal) {
     this.chatRooms = Room.all;
 
     var newModal = this;
