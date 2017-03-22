@@ -1,5 +1,4 @@
-myApp.config(function($stateProvider, $urlRouterProvider) {
-  //
+(function() {
   // For any unmatched url, redirect to /state1
   function config($stateProvider, $locationProvider) {
         
@@ -10,21 +9,14 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         });
         
         $stateProvider
-            .state('rooms', {
-                url: '/',
-                controller: 'RoomsCtrl as roomsctrl',
-                templateUrl: '/templates/home.html'
-        })
-        
-            .state('create', {
-                url: '/create',
-                templateUrl: 'templates/NewRoom.html',
-                controller: 'RoomsCtrl as roomsctrl'
-        })
+          .state('rooms', {
+              url: '/',
+              controller: 'RoomCtrl as roomctrl',
+              templateUrl: '/templates/home.html'
+          })
       }
-    })
 
-angular
-        .module('blocChat', ['firebase', 'ui.router', 'ui.bootstrap', 'ngAnimate', 'ngSanitize'])
+      angular
+        .module('blocChat', ['firebase', 'ui.router'])
         .config(config);
 })()
