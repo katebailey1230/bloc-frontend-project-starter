@@ -1,2 +1,17 @@
-<h1>Bloc Chat</h1>
-<h2 ng-repeat="room in roomctrl.chatRooms">{{room.$value}}</h2>
+<div ng-controller="RoomCtrl as home">
+
+  <div class="sidebar">
+    <h1 id="sidebar-title">Bloc Chat</h1>
+
+      <div class="rooms">
+      <div ng-repeat="myRoom in home.chatRooms">
+        <h3>{{ home.allRooms }}</h3>
+      </div>
+        <button class="addbutton" ng-click="home.getRooms()">add room</button>
+        <div class="column fourth">
+          <div class="rooms" ng-repeat="room in allRooms">
+            <h4> {{ room.name }} </h4>
+          </div>
+        </div>
+  </div>
+</div>

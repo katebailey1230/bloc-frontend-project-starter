@@ -1,16 +1,18 @@
 (function() {
-  function Room($firebaseArray) {
-    var ref = firebase.database().ref().child("rooms");
-    var rooms = $firebaseArray(ref);
-    var addRoom = function(newRoom) {
-      rooms.$add({ name: newRoom});
+    function Room($firebaseArray) {
+        var ref = firebase.database().ref().child("rooms");
+        var rooms = $firebaseArray(ref);
+           
+        var addNewChatRoom = function(newChatRoomName) {
+            rooms.$add({$value: newChatRoomName})    
+        };
+        
+        return {
+            all: rooms,
+            addNewRoom: addNewChatRoom
+        };
+        
     }
-    
-    return {
-      all: rooms
-      createRoom: addRoom
-    };
-  }
 
   angular
     .module('blocChat')

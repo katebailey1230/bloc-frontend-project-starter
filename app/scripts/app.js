@@ -14,9 +14,15 @@
               controller: 'RoomCtrl as roomctrl',
               templateUrl: '/templates/home.html'
           })
+        
+         .state('newRoom', {
+              url: '/newroom',
+              controller: 'ModalCtrl as modalctrl',
+              templateUrl: '/templates/NewRoom.html'
+          });
       }
 
       angular
-        .module('blocChat', ['firebase', 'ui.router'])
+        .module('blocChat', ['firebase', 'ui.router', 'ui.bootstrap'])
         .config(config);
 })()
