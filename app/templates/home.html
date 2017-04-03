@@ -1,7 +1,9 @@
 <div ng-controller="RoomCtrl as home">
-
-  <div class="room-nav">
+  
+  <div class="header">
     <h1>Bloc Chat</h1>
+    </div>
+  <div class="room-nav">
     <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
     <div ng-repeat="room in home.rooms">
         <h3>{{ room.name }}</h3>
