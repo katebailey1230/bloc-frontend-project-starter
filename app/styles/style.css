@@ -7,8 +7,12 @@ html {
 }
 
 .header {
-   color: blue;
+   color: black;
    text-align: center;
+   position: fixed;
+   top: 0px;
+   left: 500px
+     
 }
 
 .room-nav {
@@ -17,14 +21,15 @@ html {
     position: fixed;
     height: 100%;
     color: blue;
-    background: rgba(153, 221, 255, 0.5);
+    margin-top: -40px;
     text-align: center;
+    cursor: pointer;
 }
 
 .new-room-button {
    position: relative;
    margin-left: 0px;
-   margin-top: -40px;
+   margin-top: 0px;
    background-color: grey;
    color: white;
    padding: 10px;
@@ -32,4 +37,49 @@ html {
    border-color: black;
    border-radius: 10px;
    cursor: pointer;
+}
+
+.messages {
+    position: fixed;
+    top: 0px;
+    left: 250px;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    overflow: scroll;
+}
+
+
+.messages-body {
+    padding-right: 10px;
+}
+
+.messages-body .username {
+    font-weight: bold;
+}
+
+.messages-body .timestamp {
+    float: right;
+    padding-right: 100px;
+}
+
+.messages-body .username .timestamp {
+    display: inline-block;
+}
+
+.messages-body .user-message {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.message-field {
+    bottom: 0;
+    padding-bottom: 5px;
+    position: fixed;
+}
+
+.message-box {
+    width: 800px;
 }
