@@ -3,7 +3,6 @@ html {
     color: black;
     background-color: whitesmoke;
     min-height: 100%;
-    padding-bottom: 200px;
 }
 
 .header {
@@ -17,7 +16,7 @@ html {
 .room-nav {
     left: 0%;
     width: 15%;
-    position: relative;
+    position: fixed;
     font-size: 100%;
     color: black;
     margin-top: 100px;
@@ -37,41 +36,26 @@ html {
    border-radius: 30px;
    cursor: pointer;
 }
-
-.messages {
-    position: fixed;
-    top: 0px;
-    left: 300px;
-    width: 80%;
-    height: 100%;
-    background-color: white;
-    text-align: center;
-    z-index: 1;
-    overflow: scroll;
+.new-message-button {
+   position: fixed;
+   margin-left: 100px;
+   margin-top: 0px;
+   background-color: grey;
+   color: white;
+   padding: 10px;
+   border-style: solid;
+   border-color: black;
+   border-radius: 30px;
+   cursor: pointer;
 }
-
-
-.messages-body {
-    padding-right: 10px;
-}
-
-.messages-body .username {
-    font-weight: bold;
-}
-
-.messages-body .timestamp {
-    left: 0px;
-    padding-right: 100px;
-}
-
-.messages-body .username .timestamp {
-    display: inline-block;
-}
-
-.messages-body .user-message {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: inline-block;
+.message-nav .messages {
+    position:relative;
+    margin-top: 0px;
+    width:350px;
+    margin-left: 400px;
+    padding: 6px;
+    border-width: 7px;
+    color: blue;
 }
 
 .message-field {
@@ -81,5 +65,6 @@ html {
 }
 
 .message-box {
-    width: 500px;
+    width: 800px;
 }
+
